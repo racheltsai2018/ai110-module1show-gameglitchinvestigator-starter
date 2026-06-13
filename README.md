@@ -26,6 +26,7 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [x] Describe the game's purpose.
+
 The game's purpose is for the player to guess the secret number within the number of attempts. If the player is playing is easy mode, the number of attempts is 6. If the player is playing normal mode, the number of attempts is 8. For the difficult mode, the number of attempts is 5.
 
 - [X] Detail which bugs you found.
