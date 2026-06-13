@@ -58,6 +58,7 @@ AI helped me design the rest of the test in test_game_logic.py aside from test_w
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+I will use the guessing number game as an example when explaing the concept of Streamlit "reruns" and session state. The way that Streamlit "Reruns" work is that everytime the user interact with the website, streamlit will rerun the whole project over again. With the guessing number game, every time a player presses a button or enter a new guessing number, streamlit will rerun the whole project. With this guessing number game, the number of attempts, the past guesses, and the secret number has to stay the same while the current game is still going on. The session state save the variable while the Streamlit "reruns".
 
 ---
 

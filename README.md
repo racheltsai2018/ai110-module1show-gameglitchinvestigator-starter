@@ -25,19 +25,35 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [x] Describe the game's purpose.
+The game's purpose is for the player to guess the secret number within the number of attempts. If the player is playing is easy mode, the number of attempts is 6. If the player is playing normal mode, the number of attempts is 8. For the difficult mode, the number of attempts is 5.
+
+- [X] Detail which bugs you found.
+1. The hint would print "Too high" when secret number is higher than the guess, and vice versa.
+2. The "New Game" button does not work
+3. When switching difficulty, nothing changes in the game.
+4. The number of attempts start from 1, so total number of attempts would be allowed attempts - 1.
+5. The score is not calcualted correctly. The even attempts give +5 points if the wrong guess is made.
+6. Resolve the type error problem. 
+- [X] Explain what fixes you applied.
+1. The conditional logic was swapped to fix the hint printing out the wrong message.
+2. Statements are inserted to reset the values of all variables including attempts, score, and history.
+3. The statements to reset all variables when the difficulty changed is added, and ensured the secret number generated is within the correct range.
+4. The value saved to attempts were changed from 1 to 0 when the game starts or resets.
+5. The condition where it checks if the attempt is even attempt, if it is +5 points to the total score is removed. The line where it states +5 points to total score is also removed.
+6. Under the else clause, remove the conversion of secret value into a string. 
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. Open the project folder path in terminal and run "python -m streamlit run app.py"
+2. Choose the difficulty you want to play
+3. Enter a number in the "Enter your guess:" field.
+4. Press "Enter" key.
+5. Press "Submit Guess" button.
+6. A hint will pop up telling the paper to choose a higher or lower number.
+7. The cycle will repeat from step 3 to step 5. Until the player reaches the max number of attempts or the player guess the correct number.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
