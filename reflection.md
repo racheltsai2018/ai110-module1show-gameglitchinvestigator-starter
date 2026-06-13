@@ -21,10 +21,10 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-|50|  | |  Go Lower            Go HIGHER        None
-| | | | | After pressing new game, everything should refresh. | Only secret & attempts reset, everything else stay the same and unable to restart.
-|50|  | | After pressing submit guess the number should go in history, and allow user to enter next number. | User needs to press submit guess button twice to submit next guess.| None
- 13 |   | I tried to guess correctly at the last attempt. Results should give me correct.| Only allowed 7 attempts.| None
+|50| Go Lower |  Go HIGHER |       None |
+| | After pressing new game, everything should refresh. | 
+|50| After pressing submit guess the number should go in history, and allow user to enter next number. |User needs to press submit guess button twice to submit next guess. | None |
+ 13 | I tried to guess correctly at the last attempt. Results should give me correct. | Only allowed 7 attempts. | None |
 
 ---
 
