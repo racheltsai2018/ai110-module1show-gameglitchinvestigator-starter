@@ -23,8 +23,9 @@ Document at least 3 bugs you found. Add rows as needed.
 |-------|-------------------|-----------------|------------------------|
 |50| Go Lower |  Go HIGHER |       None |
 | | After pressing new game, everything should refresh. | Only the secret number resets | None|
-|50| After pressing submit guess the number should go in history, and allow user to enter next number. |User needs to press submit guess button twice to submit next guess. | None |
+|50| When a wrong number is entered, score should be subtracted. |Some values add scores and other subtract. | None |
  13 | I tried to guess correctly at the last attempt. Results should give me correct. | Only allowed 7 attempts. | None |
+|25| Go HIGHER| Go Lower| Not thrown but there is a type error.|
 
 ---
 
@@ -32,13 +33,17 @@ Document at least 3 bugs you found. Add rows as needed.
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)? Claude Code
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+I started with a simple issue where the number of attempts start with 1 eventhough no attempts has been made. AI helped pointed out which line in app.py caused this issue. The result is verified by running the project, and testing if a player has 8 attempts on normal mode.
+
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+When I asked the AI coding assistant for suggestion on fixing the "New Game" button not working issue. It set the attempts to start at 1. If the "new game" button is pressed, the player now only have 7 attempts instead of 8. I verified the result by running the project and testing if the new function is fixed.
 
 ---
 
 ## 3. Debugging and testing your fixes
 
-- How did you decide whether a bug was really fixed?
+- How did you decide whether a bug was really fixed? The way I decide if a bug is really fixed is by runing the project again. I reenact the scene again to make sure the outcome is correct. If the outcome is the expected outcome, then the bug is fixed. 
+
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?
