@@ -5,8 +5,15 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+  In the Developer Debug Info, it shows Secret:1, Attempts: 1, Score: 0, Difficulty: Normal, History: []
+  However, on the left side it shows attempts allowed is 8.
+  On the left side also show that the difficulty can be changed.
+
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
+  The attempts values should start from 0, because no attempts had been made in the start.
+  When switching the difficulty level, the secret value does not change to match difficulty, the instructions on top does not change depeding on difficulty level. 
+  
 
 **Bug Reproduction Log**
 
@@ -14,15 +21,16 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+|50|  | |  Go Lower            Go HIGHER        None
+| | | | | After pressing new game, everything should refresh. | Only secret & attempts reset, everything else stay the same and unable to restart.
+|50|  | | After pressing submit guess the number should go in history, and allow user to enter next number. | User needs to press submit guess button twice to submit next guess.| None
+ 13 |   | I tried to guess correctly at the last attempt. Results should give me correct.| Only allowed 7 attempts.| None
 
 ---
 
 ## 2. How did you use AI as a teammate?
 
-- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+- Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)? Claude Code
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
