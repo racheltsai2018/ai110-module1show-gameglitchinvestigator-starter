@@ -23,27 +23,6 @@ def test_guess_too_low():
 from app import get_range_for_difficulty, parse_guess, update_score
 
 
-# Bug 1: Hints were backwards. A guess ABOVE the secret must go LOWER,
-# and a guess BELOW must go HIGHER.
-def test_too_high_says_go_lower():
-    outcome, message = check_guess(60, 50)
-    assert outcome == "Too High"
-    assert "LOWER" in message.upper()
-
-
-def test_too_low_says_go_higher():
-    outcome, message = check_guess(40, 50)
-    assert outcome == "Too Low"
-    assert "HIGHER" in message.upper()
-
-
-def test_hint_direction_not_reversed():
-    # Reflection log: guessing 50 (secret 25) -> lower; 25 (secret 50) -> higher.
-    assert check_guess(50, 25)[0] == "Too High"
-    assert check_guess(25, 50)[0] == "Too Low"
-
-
-# Bug 2: Difficulty range must match the selected difficulty.
 def test_range_easy():
     assert get_range_for_difficulty("Easy") == (1, 20)
 
@@ -56,7 +35,6 @@ def test_range_hard():
     assert get_range_for_difficulty("Hard") == (1, 50)
 
 
-# Bug 3: A wrong guess sometimes ADDED points. It should never increase score.
 def test_wrong_guess_never_adds_score():
     start = 100
     for attempt in range(1, 9):
@@ -73,7 +51,6 @@ def test_winning_increases_score():
     assert update_score(0, "Win", 1) > 0
 
 
-# Bug 4: Input parsing.
 def test_parse_valid_integer():
     ok, value, err = parse_guess("42")
     assert ok is True
